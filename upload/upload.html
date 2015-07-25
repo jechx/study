@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<!-- 上传测试 -->
+<form action="doAction1.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="pic" value=""/><br />
+    <input type="submit" value="上传" />
+</form>
+
+
+<!-- 表单验证 -->
+<form action="" method="post">
+    <label for="username">
+        用户名：
+    </label>
+    <input type="text" id="username" class="required">
+
+    <lable for="email">
+        邮箱：
+    </lable>
+    <input type="text" id="email" class="required">
+
+    <lable for=""personinfo>
+        个人资料：
+    </lable>
+    <input type="text" id="personinfo">
+
+    <input type="submit" value="提交" id="send">
+    <input type="reset" id=""res">
+ </form>
+
+<script>
+    $('form :input .required').each(function(){
+        var $required = $("<strong class='high'>*</strong>");
+        $(this).parent().append($required);
+    })
+</script>
+</body>
+</html>
